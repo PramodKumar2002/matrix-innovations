@@ -1,0 +1,10 @@
+{
+  "name": "matrix-backend",
+  "version": "1.0.0",
+  "description": "Matrix Innovations FastAPI Python Backend",
+  "scripts": {
+    "dev": "powershell -Command \".\\venv\\Scripts\\python.exe -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000\"",
+    "start": "powershell -Command \".\\venv\\Scripts\\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000\"",
+    "test": "powershell -Command \".\\venv\\Scripts\\python.exe test_backend.py\""
+  }
+}
