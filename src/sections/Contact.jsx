@@ -87,9 +87,9 @@ export default function Contact({ prefilledSubject = '' }) {
     setApiError(null);
 
     // Read backend base URL from Vite environment variables (fallback to local backend port 8000)
-    const rawBaseUrl = import.meta.env.VITE_API_BASE_URL;
-    const baseUrl = (rawBaseUrl !== undefined ? rawBaseUrl : 'http://127.0.0.1:8000').replace(/\/+$/, '');
-    const apiUrl = baseUrl ? `${baseUrl}/api/contact` : '/api/contact';
+   const rawBaseUrl = import.meta.env.VITE_API_BASE_URL ?? '';
+   const baseUrl = rawBaseUrl.replace(/\/+$/, '');
+   const apiUrl = baseUrl ? `${baseUrl}/api/contact` : '/api/contact';
 
     try {
       const response = await fetch(apiUrl, {
